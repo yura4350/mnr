@@ -1,11 +1,16 @@
 import Header from "./header"
+import ContestList from "./contest-list"
 
 import {useState, useEffect} from "react"
 
-const App = () => {
+const App = ({initialData}) => {
     return (
-        <div>
+        <div className="container">
             <Header message="Naming contests" />
+
+            <ContestList initialContests={initialData.contests}/>
+            
+            
         </div>
     )
 }
